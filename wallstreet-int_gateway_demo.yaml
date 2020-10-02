@@ -1,0 +1,83 @@
+wallstreet:
+  gateway:
+    billinggateway:
+      -
+        site-key:  '{cipher}AQBGoIwo4eTFUpzHdGyZ+NNBILKkbATvdrj6k6Bi/WYlTo8JQ0Q4ET6aWLGg+r1FQU1WpMkuX+T8j0tLocrsARVZsvwsHcuTp4hO9R64QaH+jXwCIuhLC3cQWlxzZ7ur8yyGT8mAydW8qI9f8ETDuTcgOrIOw5LkXiNg1wZd97qJvneK6RrDCxqh1EaW0CRNd1GO7kEcTRJH31CGLo/039imVO/TP4BD4aBiJerIrxKBIB4oG9Tdj4oHpwmScHnhEXE1tGkQvSOQ3me3wZXKoXMZCx0ssgtgJoM7i3CUra8FtPCUT8ogSGhJdHhJxh3ooF7wBEMDABj/9AWJ3HEZACd49Ey+NnfaAndrgbLZU6ISzg+9ZR7nWnE+NXJXvaTzKyeneHMZH4SFlLxL4lg+pvGVviTzyyP20v2gBnA3rHcpkw=='
+        site-url: badri-test
+        gateway-key: int
+      -
+        site-key:  '{cipher}AQAbnvoR+5C+Pr1QTZdTAxNnmQ2+bAndQzrs/gkb8pcIwB6S1bOi1/vBuyE8w6l4ksUoX4pTvwSuamPeCl6rdwFH3lZ4d5k8doJKxszdKing1sRzrWhvPkMLiBIfTzvvxgjwO7GsETLFioOOkQqtyd0fDg8/83olnVcpHCGAD6GmsC3QQKM0tVACAgGRbhb9VQeHv3pmvGKAVJv74iPB+I+m7LcggiKzJLQyYr7b+M0dlIxFH/5Z11Tq54O64vDt5M9yVhFTVPSHiS8FZ8yjkc81og/UdOMaZaTSsTzvHXWGHoLAC/SrHegkgu4NBS3cjMnh0XDhSI3/46H8LTa7lvR1Z1016QqAEIo9yi5WDf+E3FNH8m4DqQquWt5F1wOhdbQ5aanfq2DQ/QDigj7AxRDl3F5B13cwMDk1dA4D1T6P5w=='
+        site-url: freshsales-test
+        gateway-key: sales360
+      -
+        site-key:  '{cipher}AQBZALcsmVt3LdPV7Y4VQIGwDunOcDTOOh/2Bnht5VKnUV2XIOyYuiJIM7Qgz9Ddndjmkhh3s7vNv9ykFYenctJLtFa89UF1B8bKn4IkUXhFnjU/ztx6y9YhTieD09g4np4plOWVGoee6mbornneFBtOQRRFaz4jjjoyuBtkJ05S8TQqi4dMegk6xEln2ZhWkpdo5G4rRo3ucANC2eiMEUs/2gRLpEB+5ujADTbT4ZkaCrlBS5EY/0jIkdlMc+/1KIFWQkSNVKD0iFSMMa/8TTgApuChuA11O8uzGYcjTUKdRylcCFB4HW+1ZeTbacngv+o2ZoB0i7gt18olDn8Cp4dAnUo1E2dfrOoAcOvxWPCCpK5qINnNYFqj3uga2U2EKin2yTtBMuSwzWh+u4VELWqSi7aF2c6qbnagMVSorbVSsA=='
+        site-url: freshbilling-test
+        gateway-key: default
+  supported:
+    uris: subscriptions,plans,addons,invoices,organisations,brands,categories,features,category
+    region: INT
+  consumer:
+    chargebee:
+      authentication:
+        basic:
+          username: wallstreet-chargebee
+          password: '{cipher}AQADVg6ddL/qQ/UmcZIatlfTkjilcWmoK9UGP4SG+gJkORrmVwSU5PfaC9ehw2YaTctagzfp3BefFF96JnUUn+ayakD9BnnDCWVdj/nR1YKgbcOKzq167Xz5OHVPDqwoU0YezMvjhrHBKLS1q7vYUXdfdlppsvIQYvssfTkOYW0Zadmx684CQ31DEGa4ftXGzCRMsFtGFpzVxLK1er28FrAjbBziMw5rEkmJkh8Ey7C+5XvzfGlQ4m0lYFMMZTaVSLp0h52e+68cw8840GRiZCZOF33IeDUXexJGNu/In/UdDP7jI+FHyav7J6dwb0RIl+y0sfKFVYvb9pyd+Y4juROmCHR7kvdr164JDld71s4zHvtjkV74ni7axkeIF5XC6PM='
+  ribbon:
+    ReadTimeout: 60000
+    ConnectTimeout: 60000
+  central:
+    topics: ubx_event_qa
+    enabled: true
+    url: https://central-staging.freshworksapi.com/collector
+    truststore-location: /etc/store/client.truststore
+    truststore-password: '{cipher}AQBaE7QQXGYoO7rPA3aq2qjqjNEn/vs3h1On/Oq1DW00Mdp+TqiMwdpTj/aU0bGc1NGRZ7L7yDU+H15rgarEOw33sZqJg5M/Nr5pfPLDWXwbp1YbXxbSi2dzp16GKplbw2eqD2qcgdPKTv6Ekb1d/EF6Zs85u+ZRe+yA0nVENYO3yvblZKqizuDAFoVXmbX36Mhrrjb8zWUagXvupV3HKPNAXCULOw2Hl5yjf9QJ7U4D2XArQMzVHNXqVD6FdJIwrUz4poQybPwv72tJj4pZ5TNN8bXORKb2D7BIVUmZLNGrew3BjrR/qPiBG/1ZHi8dxtR67PEXsOSt8w5OR50jEqsYEF0nlyXBKUJjWIIYM7ocZzYYjXrg0XqZyw0a2W03IhA='
+    service: '{cipher}AQBGhgGU0l8BE6j6ioyqopTAnO6YGJDp5vSlEuCz5T01iFk/1f84I8ZWvWzAOGQCgOv6IBWP4VQPkgOopfe4y001wcjZrFhTFfDY2SkbbGRQDzBZWuKOvyuW6i0eSi4DOY3o3cjofKAL2b7G7JibMROSP+tr6xBpRqP9CsgiaGGcGxSBWdg8Cyx5MzKQ+9DX5qrmbEOG2blYChnoFYn4GwTpCiqo2B1G75o7RBHG2qIg+ya04Q52BN67XAHfFEPIvbEPJFzql+R6b9U/TNNd+n0iv+E1NI5U/ESt9J60P7Ee6ApZsmB0f4NBM/RYFM3vMTlAMaAGQj8BjstL5qPxiCUbOPYaUJw+kyGw0xA35fajQ+rxbav15qJdaUI45i3/4D2qphHWxFOpfIj1CRS+458p'
+
+
+zuul:
+  routes:
+    consumer:
+      service-id: wallstreet-consumer
+      path: /events/**
+      strip-prefix: false
+    wallstreet:
+      service-id: web-demo
+      path: /**
+      sensitive-headers: Cookie,Set-Cookie
+      strip-prefix: false
+  ignored-patterns: /actuator/**
+  wallstreet:
+    nonfilters:
+      uris: events,monitor
+
+server:
+  tomcat:
+    accesslog:
+      directory: /var/log/wallstreet
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://accounts.freshid.io/.well-known/jwks.json
+wallstreet-consumer:
+  ribbon:
+    listOfServers: wallstreet-consumer.wallstreet-int.svc.cluster.local
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+
+web-demo:
+  ribbon:
+    ReadTimeout: 60000
+    ConnectTimeout: 60000
+
+management:
+  health:
+    defaults:
+      enabled: false
